@@ -1,0 +1,75 @@
+<mvc:View
+   controllerName="sap.ui.demo.walkthrough.controller.ItemList"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+   <Panel
+      class="sapUiResponsiveMargin"
+      width="auto" >
+      <content>
+        <Table
+                id="ItemList"
+                class="sapUiResponsiveMargin"
+                width="auto"
+                items="{
+                    path : 'invoice>/Invoices'
+                }">
+            <headerToolbar>
+                <Toolbar>
+                    <Title text="ТАБЛИЦА"/>
+                </Toolbar>
+            </headerToolbar>
+            <columns>
+                <Column
+                    hAlign="End"
+                    minScreenWidth="Small"
+                    demandPopin="true"
+                    width="4em">
+                    <Text text="колво"/>
+                </Column>
+                <Column>
+                    <Text text="название"/>
+                </Column>
+                <Column
+                    minScreenWidth="Small"
+                    demandPopin="true">
+                    <Text text="статус"/>
+                </Column>
+                <Column
+                    minScreenWidth="Tablet"
+                    demandPopin="false">
+                    <Text text="производитель"/>
+                </Column>
+                <Column
+                    hAlign="End">
+                    <Text text="цена"/>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem
+                    type="Navigation"
+                    press=".onPress">
+                    <cells>
+                        <ObjectNumber number="{invoice>Quantity}" emphasized="false"/>
+                        <ObjectIdentifier title="{invoice>ProductName}"/>
+                        <Text text="{
+                            path: 'invoice>Status',
+                            formatter: '.formatter.statusText'
+                        }"/>
+                        <Text text="{invoice>ShipperName}"/>
+                        <ObjectNumber
+                            number="{
+                                parts: [{path: 'invoice>ExtendedPrice'}, {path: 'view>/currency'}],
+                                type: 'sap.ui.model.type.Currency',
+                                formatOptions: {
+                                    showMeasure: false
+                                }
+                            }"
+                            unit="{view>/currency}"
+                            state="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }"/>
+                    </cells>
+                </ColumnListItem>
+            </items>
+	</Table>
+      </content>
+   </Panel>
+</mvc:View>
