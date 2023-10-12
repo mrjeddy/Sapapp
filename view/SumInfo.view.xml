@@ -7,13 +7,18 @@
       class="sapUiResponsiveMargin"
       width="auto" >
       <content>
-        <core:Icon
-            src="sap-icon://hello-world"/>
+        <Text 
+            text="Показатели:"
+            width="90%"/>
+        <Text 
+            width="10%"
+            id="item_lenght"
+            text="0 шт"/>
         <FormattedText
-            htmlText="Показатели"/>
-        <FormattedText
+            id="sum_price"
             htmlText="Сумма:"/>
         <FormattedText
+            id="ave_price"
             htmlText="Среднее:"/>
       </content>
    </Panel>

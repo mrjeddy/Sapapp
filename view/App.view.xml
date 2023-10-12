@@ -8,8 +8,7 @@
 			<pages>
 				<Page title="Райское наслаждение">
 					<content>
-						<mvc:XMLView viewName="sap.ui.demo.walkthrough.view.SumInfo"/>
-						<mvc:XMLView viewName="sap.ui.demo.walkthrough.view.ItemList"/>
+						<mvc:XMLView viewName="sap.ui.demo.walkthrough.view.Table"/>
 					</content>
 				</Page>
 			</pages>

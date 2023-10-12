@@ -4,15 +4,11 @@ sap.ui.define([
 	"use strict";
 
 	return UIComponent.extend("sap.ui.demo.walkthrough.Component", {
-
-		metadata : {
-            invoice: "json",
-			manifest: "json"		
-		},
-
 		init : function () {
 			// call the init function of the parent
 			UIComponent.prototype.init.apply(this, arguments);
+
+			
 
 		}
 	});
