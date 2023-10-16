@@ -1,7 +1,7 @@
 {
     "_version": "1.12.0",
     "sap.app": {
-      "id": "sap.ui.demo.walkthrough",
+      "id": "sap.ui.testapp",
       "type": "application",
       "title": "TestApp",
       "description": "SapTestApp",
@@ -19,7 +19,7 @@
     },
     "sap.ui5": {
       "rootView": {
-          "viewName": "sap.ui.demo.walkthrough.view.App",
+          "viewName": "sap.ui.testapp.view.App",
           "type": "XML",
           "async": true,
           "id": "app"
@@ -29,11 +29,8 @@
         "libs": {
           "sap.m": {}
         }
-      },"models": {
-          "invoice": {
-              "type": "sap.ui.model.json.JSONModel",
-              "uri": "Invoices.json"
-          },
+      },
+      "models": {
           "good": {
             "type": "sap.ui.model.json.JSONModel",
             "uri": "Goods.json"
@@ -43,7 +40,7 @@
         "config": {
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
-        "viewPath": "sap.ui.demo.walkthrough.view",
+        "viewPath": "sap.ui.testapp.view",
         "controlId": "app",
         "controlAggregation": "pages",
         "async": true
@@ -55,17 +52,17 @@
           "target": "tableview"
         },
         {
-          "pattern": "item",
+          "pattern": "item/{goodPath}",
           "name": "item",
           "target": "item"
         }
         ],
         "targets": {
-        "overview": {
+        "tableview": {
           "viewId": "tableview",
-          "viewName": "Table"
+          "viewName": "TableBlock"
         },
-        "detail": {
+        "item": {
           "viewId": "item",
           "viewName": "ItemInfo"
         }

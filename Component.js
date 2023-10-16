@@ -3,7 +3,11 @@ sap.ui.define([
 ], function (UIComponent) {
 	"use strict";
 
-	return UIComponent.extend("sap.ui.demo.walkthrough.Component", {
+	return UIComponent.extend("sap.ui.testapp.Component", {
+		metadata: {
+			manifest: "json",
+			good: "json"
+		},
 		init : function () {
 			// call the init function of the parent
 			UIComponent.prototype.init.apply(this, arguments);

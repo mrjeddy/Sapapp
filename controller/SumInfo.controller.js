@@ -1,9 +1,8 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
-    "sap/ui/model/json/JSONModel"
- ], function (Controller, JSONModel) {
+    "sap/ui/core/mvc/Controller"
+ ], function (Controller, ) {
     "use strict";
-    return Controller.extend("sap.ui.demo.walkthrough.controller.SumInfo", {
+    return Controller.extend("sap.ui.testapp.controller.SumInfo", {
       metadata : {
          manifest: "json"
       },
@@ -18,7 +17,6 @@ sap.ui.define([
             this.byId("item_lenght").setText(data.Goods.length+" шт.");
             this.byId("sum_price").setHtmlText("Сумма: "+ allPrice.toFixed(2));
             this.byId("ave_price").setHtmlText("Среднее: "+ (allPrice/data.Goods.length).toFixed(2));
-
          });
       }
     });

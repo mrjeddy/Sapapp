@@ -2,7 +2,7 @@ sap.ui.define([
     "sap/ui/core/mvc/Controller",
  ], function (Controller) {
     "use strict";
-    return Controller.extend("sap.ui.demo.walkthrough.controller.Table", {
+    return Controller.extend("sap.ui.testapp.controller.Table", {
        
     });
  });

@@ -1,5 +1,5 @@
 <mvc:View
-   controllerName="sap.ui.demo.walkthrough.controller.ItemList"
+   controllerName="sap.ui.testapp.controller.ItemList"
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
    <Panel
