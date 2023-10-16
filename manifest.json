@@ -38,6 +38,38 @@
             "type": "sap.ui.model.json.JSONModel",
             "uri": "Goods.json"
         }
+      },
+      "routing": {
+        "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "sap.ui.demo.walkthrough.view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "async": true
+        },
+        "routes": [
+        {
+          "pattern": "",
+          "name": "tableview",
+          "target": "tableview"
+        },
+        {
+          "pattern": "item",
+          "name": "item",
+          "target": "item"
+        }
+        ],
+        "targets": {
+        "overview": {
+          "viewId": "tableview",
+          "viewName": "Table"
+        },
+        "detail": {
+          "viewId": "item",
+          "viewName": "ItemInfo"
+        }
+        }
       }
     }
   }
