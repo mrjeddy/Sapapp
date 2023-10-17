@@ -7,27 +7,31 @@ controllerName="sap.ui.testapp.controller.ItemInfo"
         showNavButton="true"
 		navButtonPress=".onNavBack">
         <Panel
-        class="sapUiResponsiveMargin"
-        width="auto" >
-        <content>
-            <FormattedText
-                id="item_name"
-                htmlText="Название"/>
-            <FormattedText
-                id="item_prod"
-                htmlText="Производитель"/>
-            <FormattedText
-                id="item_price"
-                htmlText="Цена:"/>
-            <FormattedText
-                id="item_cal"
-                htmlText="Калорийность"/>
-            <FormattedText
-                htmlText="Описание"/>
-            <FormattedText
-                id="item_desc"
-                htmlText="Описание"/>
-        </content>
+            class="sapUiResponsiveMargin"
+            width="auto">
+            <content>
+                <FormattedText
+                    id="item_name"
+                    htmlText="Название"/>
+                <FormattedText
+                    id="item_prod"
+                    class="sapUiResponsiveMargin"
+                    htmlText="Производитель"/>
+                <FormattedText
+                    id="item_price"
+                    class="sapUiResponsiveMargin"
+                    htmlText="Цена:"/>
+                <FormattedText
+                    id="item_cal"
+                    class="sapUiResponsiveMargin"
+                    htmlText="Калорийность"/>
+                <FormattedText
+                    htmlText="Описание:"/>
+                <FormattedText
+                    id="item_desc"
+                    htmlText="Описание"
+                    class="sapUiResponsiveMargin"/>
+            </content>
         </Panel>
 	</Page>
 </mvc:View>
